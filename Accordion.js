@@ -77,7 +77,7 @@ class Accordion extends Component {
       <View {...viewProps}>
       {this.props.sections.map((section, key) => (
         <View key={key}>
-          <TouchableHighlight onPress={() => this._toggleSection(key)} underlayColor={this.props.underlayColor}>
+          <TouchableHighlight onPress={() => this._toggleSection(key)} underlayColor={this.props.underlayColor} style={this.props.headerTouchStyle}>
             {this.props.renderHeader(section, key, this.state.activeSection === key)}
           </TouchableHighlight>
           <Collapsible collapsed={this.state.activeSection !== key} {...collapsibleProps}>
